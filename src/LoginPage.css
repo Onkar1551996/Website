@@ -1,0 +1,60 @@
+body {
+  background-color: rgb(78, 78, 78);
+}
+.InputPage {
+  margin: 5% 33%;
+}
+
+.InputBox {
+  background-color: black;
+}
+
+.TextBox {
+  margin-right: 20%;
+  margin-left: 20%;
+  border-bottom: 1px solid skyblue;
+}
+
+input {
+  width: 100%;
+  color: rgb(216, 138, 13);
+  font-weight: bold;
+  margin-top: 15%;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.SubmitBtn {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 20%;
+  margin-left: 20%;
+  font-weight: bold;
+  color: rgb(216, 138, 13);
+  background: none;
+  width: 60%;
+  outline: none;
+  border-color: skyblue;
+  padding: 10px;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(216, 138, 13);
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+p {
+  display: inline-block;
+  margin-bottom: 10%;
+  margin-right: 20%;
+  margin-left: 20%;
+  color: rgb(216, 138, 13);
+  font-size: small;
+}
+
+p a {
+  color: skyblue;
+  text-decoration: none;
+}
