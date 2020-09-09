@@ -1,44 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import Route from "react-router-dom/Route";
 import "./App.css";
 import LoginPage from "./LoginPage";
-import RegistrationPage from "./RegistrationPage";
+import HomePage from "./HomePage";
 
 function App() {
-  const [msg, setMsg] = useState("");
-
-  function moveTo(page) {
-    let val;
-    switch (page) {
-      case "login":
-        val = <LoginPage />;
-        setMsg(val);
-        break;
-
-      case "register":
-        setMsg(<RegistrationPage />);
-        break;
-
-      default:
-        setMsg("");
-    }
-    console.log(msg);
-  }
-
   return (
-    <div className="App">
-      <div className="Header">
-        <div className="MenuBar">
-          <a href="/">HOME</a>
-          <a href="/about">ABOUT</a>
-          <a href="/login" id="login" onClick={(e) => moveTo(e.target.id)}>
-            LOGIN
-          </a>
+    <Router>
+      <div className="App">
+        <div className="Header">
+          <div className="MenuBar">
+            <NavLink to="/" exact>
+              HOME
+            </NavLink>
+            <NavLink to="/about" exact>
+              ABOUT
+            </NavLink>
+            <NavLink to="/login" exact>
+              LOGIN
+            </NavLink>
+          </div>
         </div>
       </div>
-      <div className="Content">
-        <h1>{msg}</h1>
-      </div>
-    </div>
+      <Route path="/" exact strict component={HomePage} />
+      <Route path="/about" exact strict component={LoginPage} />
+      <Route path="/login" exact strict component={LoginPage} />
+    </Router>
   );
 }
 
