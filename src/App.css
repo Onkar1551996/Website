@@ -4,8 +4,12 @@
   padding: 20px;
 }
 
+.MenuBar {
+  text-align: right;
+}
+
 .MenuBar a {
-  margin-left: 50px;
+  margin-right: 3%;
   color: skyblue;
   font-size: medium;
   font-weight: bold;

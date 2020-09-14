@@ -1,36 +1,31 @@
 import React from "react";
 import "./LoginPage.css";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
-import Route from "react-router-dom/Route";
-import RegistrationPage from "./RegistrationPage";
+import { NavLink } from "react-router-dom";
 
 function LoginPage() {
   return (
-    <Router>
-      <div className="InputPage">
-        <div className="InputBox">
-          <div className="TextBox">
-            <input type="text" placeholder="Username" /> <br />
-          </div>
-          <div className="TextBox">
-            <input type="password" placeholder="Password" /> <br />
-          </div>
-          <div className="Btn">
-            <button className="SubmitBtn" type="submit">
-              Login
-            </button>
-            <br />
-          </div>
-          <p>
-            Don't Have An Account?
-            <NavLink to="/register" exact>
-              Register
-            </NavLink>
-          </p>
+    <div className="InputPage">
+      <div className="InputBox">
+        <div className="TextBox">
+          <input type="text" placeholder="Username" /> <br />
         </div>
+        <div className="TextBox">
+          <input type="password" placeholder="Password" /> <br />
+        </div>
+        <div className="Btn">
+          <button className="SubmitBtn" type="submit">
+            Login
+          </button>
+          <br />
+        </div>
+        <p>
+          Don't Have An Account?
+          <NavLink to="/register" exact>
+            &nbsp; Register Now.
+          </NavLink>
+        </p>
       </div>
-      <Route path="/register" exact strict component={RegistrationPage} />
-    </Router>
+    </div>
   );
 }
 

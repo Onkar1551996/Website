@@ -4,6 +4,8 @@ import Route from "react-router-dom/Route";
 import "./App.css";
 import LoginPage from "./LoginPage";
 import HomePage from "./HomePage";
+import AboutUs from "./AboutUs";
+import RegistrationPage from "./RegistrationPage";
 
 function App() {
   return (
@@ -20,12 +22,16 @@ function App() {
             <NavLink to="/login" exact>
               LOGIN
             </NavLink>
+            <NavLink to="/register" exact>
+              REGISTER
+            </NavLink>
           </div>
         </div>
       </div>
       <Route path="/" exact strict component={HomePage} />
-      <Route path="/about" exact strict component={LoginPage} />
+      <Route path="/about" exact strict component={AboutUs} />
       <Route path="/login" exact strict component={LoginPage} />
+      <Route path="/register" exact strict component={RegistrationPage} />
     </Router>
   );
 }

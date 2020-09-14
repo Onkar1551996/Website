@@ -45,6 +45,12 @@ input {
   opacity: 0.6;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 p {
   display: inline-block;
   margin-bottom: 10%;
@@ -52,6 +58,7 @@ p {
   margin-left: 20%;
   color: rgb(216, 138, 13);
   font-size: small;
+  font-weight: bold;
 }
 
 p a {
